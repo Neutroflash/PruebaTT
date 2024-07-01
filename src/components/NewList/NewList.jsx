@@ -58,7 +58,7 @@ const NewsList = () => {
 
     return (
         <div className="news-list-container">
-            <NewsFilters onSearch={handleSearch} onFilter={handleFilter} />
+            <NewsFilters onSearch={handleSearch} onFilter={handleFilter} country={country} />
             <div className="news-list">
                 {filteredNews.map((article, index) => (
                     <div key={index} className="news-item">

@@ -8,7 +8,8 @@ export const getTopHeadlines = async (country = 'us') => {
         const response = await axios.get(`${BASE_URL}/top-headlines`, {
             params: {
                 country,
-                apiKey: API_KEY
+                apiKey: API_KEY,
+                headers: { 'Upgrade': 'HTTP/2.0' } 
             }
         });
         return response.data.articles;

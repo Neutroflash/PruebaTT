@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-const NewsFilters = ({ onSearch, onFilter }) => {
+const NewsFilters = ({ onSearch, onFilter, country }) => {
     const [keyword, setKeyword] = useState('');
-    const [country, setCountry] = useState('us');
     const [searchByFoundWord, setSearchByFoundWord] = useState(false);
 
     const handleSearch = () => {
@@ -11,7 +10,6 @@ const NewsFilters = ({ onSearch, onFilter }) => {
 
     const handleFilter = (e) => {
         const selectedCountry = e.target.value;
-        setCountry(selectedCountry);
         onFilter(selectedCountry);
     };
 
